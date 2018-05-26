@@ -1,0 +1,26 @@
+{{title}}
+
+<br>
+
+
+Passpharse(Generate Public Key to Encrypt Text And RSA Key Decrypt Text): <input placeholder="PassPhrase" type="text" [(ngModel)]="PassPhrase" /> <button (click)="generatePublicKey()" >Generate</button>
+
+<br />
+Generated keyOutput: {{PublicKeyString}}
+
+
+<br /><br />
+
+Encrypt Text (Text will be encrypted using above generated key): <input type="text" [(ngModel)]="plaintext" /> <button (click)="encryptText()" >Encrypt</button>
+<br />
+Cipher Text: {{EncryptionResult.cipher}}
+
+
+<br /><br />
+
+
+Decrypt: <button (click)="decryptText()" >Decrypt</button>
+
+<br /><br />
+
+Result: {{DecryptionResult.plaintext}}
